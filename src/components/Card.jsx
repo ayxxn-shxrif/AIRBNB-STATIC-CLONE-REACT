@@ -1,7 +1,10 @@
 import React from "react"
 
 export default function Card(props) {
-    let badgeText
+  const coverImg = `../images/${props.coverImg}`
+  const starImg = `../images/star.png`
+  let badgeText
+  
     if (props.openSpots === 0) {
         badgeText = "SOLD OUT"
     } else if (props.location === "Online") {
@@ -15,11 +18,11 @@ export default function Card(props) {
                 <div className="card--badge">{badgeText}</div>
             }
             <img 
-                src={`../images/${props.coverImg}`} 
+                src={coverImg} 
                 className="card--image" 
             />
             <div className="card--stats">
-                <img src="../images/star.png" className="card--star" />
+                <img src={starImg} className="card--star" />
                 <span>{props.stats.rating}</span>
                 <span className="gray">({props.stats.reviewCount}) • </span>
                 <span className="gray">{props.location}</span>
