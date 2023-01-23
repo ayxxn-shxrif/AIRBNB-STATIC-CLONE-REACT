@@ -1,8 +1,8 @@
 import React from "react"
 
 export default function Card(props) {
-  const coverImg = `../public/static/images/${props.coverImg}`
-  const starImg = `../public/static/images/star.png`
+  const coverImg = `/static/images/${props.coverImg}`
+  const starImg = `/static/images/star.png`
   let badgeText
   
     if (props.openSpots === 0) {
