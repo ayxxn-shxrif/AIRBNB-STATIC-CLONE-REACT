@@ -24,12 +24,96 @@ nav {
 
 .nav--logo {
     max-width: 100px;
+    margin-right:auto;
+}
+
+nav.dark {
+    background-color: #21222A;
+}
+
+.nav--logo_icon {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.nav--logo_text {
+    color: #61DAFB;
+    margin-right: auto;
+}
+
+.nav--title {
+    color: #DEEBF8;
+}
+
+.toggler {
+    display: flex;
+    align-items: center;
+}
+
+.toggler p {
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+    border-color: white;
+    background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+    background-color: black;
+}
+
+.toggler--light {
+    color: #2B283A;
+}
+
+nav.dark .toggler--light {
+    color: #918E9B;
+}
+
+.toggler--dark {
+    color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+    color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+    justify-content: flex-end;
 }
 
 section {
     padding: 20px;
 }
 
+div.dark {
+    
+    background-color: #282D35;
+    color: white;    
+}
 .hero {
     display: flex;
     flex-direction: column;
@@ -49,21 +133,26 @@ section {
 }
 
 .cards-list {
-    display: flex;
+background-color:#282D35;
+  display: flex;
     flex-wrap: nowrap;
     gap: 20px;
     overflow-x: auto;
 }
 
 .card {
-    width: 175px;
+  background-color:#282d35;  
+  width: 175px;
     font-size: 12px;
     flex: 0 0 auto;         /* ADD */
     display: flex;          /* ADD */
     flex-direction: column; /* ADD */
     position: relative;
 }
-
+card.dark {
+    background-color: #282D35;
+    color: white;    
+}
 .card--image {
     width: 100%;
     border-radius: 9px;
@@ -71,12 +160,12 @@ section {
 }
 
 /* ADD */
-.card--title {
+.card--title {color:white;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.card--stats {
+.card--stats {color:white;
     display: flex;
     align-items: center;
 }
@@ -87,15 +176,20 @@ section {
 
 /* ADD */
 .card--price {
-    margin-top: auto;
+    margin-top: auto;color:white;
 }
 
 .card--badge {
     position: absolute;
     top: 6px;
     left: 6px;
-    background-color: white;
+    background-color: #282d35;
     padding: 5px 7px;
     border-radius: 2px;
-    font-weight: bold;
+    font-weight: bold;color:white;
+}
+div.dark {
+    background-image: url("./images/react-icon-dark.png"); 
+    background-color: #282D35;
+    color: white;    
 }

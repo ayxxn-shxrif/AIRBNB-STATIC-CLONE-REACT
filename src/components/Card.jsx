@@ -12,7 +12,8 @@ export default function Card(props) {
     }
     
     return (
-        <div className="card">
+ <div className={props.darkMode ? "dark" : ""}>
+    <div className="card">
             {
                 badgeText && 
                 <div className="card--badge">{badgeText}</div>
@@ -32,5 +33,5 @@ export default function Card(props) {
                 <span className="bold">From ${props.price}</span> / person
             </p>
         </div>
-    )
+  </div>)
 }

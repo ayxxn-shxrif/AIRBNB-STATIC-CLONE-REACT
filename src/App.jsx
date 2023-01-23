@@ -7,20 +7,27 @@ import data from "./data"
 export default function App() {
     const cards = data.map(item => {
         return (
-            <Card
-                key={item.id}
-                {...item}
+            <Card 
+                  key={item.id}
+                  {...item}
                 
             />
         )
     })        
+    const [darkMode, setDarkMode] = React.useState(true)
     
+    function toggleDarkMode() {
+        setDarkMode(prevMode => !prevMode)
+    } 
     return (
         <div>
-            <Navbar />
-            <Hero />
+            <Navbar 
+               darkMode={darkMode} 
+               toggleDarkMode={toggleDarkMode}/>
+            <Hero 
+               darkMode={darkMode} />
             <section className="cards-list">
-                {cards}
+                {cards} 
             </section>
         </div>
     )
